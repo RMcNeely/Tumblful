@@ -1,0 +1,7 @@
+      invoke  active_record
+      create    db/migrate/20150128152124_create_article_links.rb
+      create    app/models/article_link.rb
+      invoke    rspec
+      create      spec/models/article_link_spec.rb
+      invoke      factory_girl
+      create        spec/factories/article_links.rb
