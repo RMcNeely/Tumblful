@@ -1,6 +1,6 @@
 class ImageLinksController < ApplicationController
   def index
-    @image_link = ImageLink.all
+    @image_links = ImageLink.all
   end
   
   def show
@@ -8,11 +8,11 @@ class ImageLinksController < ApplicationController
   end
   
   def new
-    @image_link = ImageLink.new(url: params[:image_link][:url], title: params[:image_link][:title])
-    if @image_link.save
+    @image_links = ImageLink.new(url: params[:image_link][:url], title: params[:image_link][:title])
+    if @image_links.save
       redirect_to :index
     else
-      @errors = @image_link.errors
+      @errors = @image_links.errors
       render :new
     end
   end
@@ -27,8 +27,8 @@ class ImageLinksController < ApplicationController
   end
   
   def create
-    @image_link = ImageLink.find(image_link_params[:id])
-    if @image_link.save
+    @image_links = ImageLink.find(image_link_params[:id])
+    if @image_links.save
       redirect_to :index
     else
       @errors = @image_link.errors

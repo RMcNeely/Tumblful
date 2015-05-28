@@ -20,6 +20,7 @@ Tumblful::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 resources  :image_links
+resources  :text_posts
   # Example resource route with options:
   #   resources :products do
   #     member do
